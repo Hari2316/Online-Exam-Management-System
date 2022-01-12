@@ -12,7 +12,7 @@ Session::checkSession();
 
 	<div class="segment" style="margin-right:30px;">
 
-		<img src="img/online_exam.png"/>
+		<img src="img/1.jpg"/>
 
 	</div>
 	<div class="segment">

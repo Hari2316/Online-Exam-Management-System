@@ -72,7 +72,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'logout'){
             $login = Session::get("login");
             if($login == true){
             ?>
-            <span style="float: right; color: #888">
+            <span style="float: left; color: white">
                 Welcome <strong><?php echo Session::get("username"); ?></strong>
             </span>
             <?php } ?>

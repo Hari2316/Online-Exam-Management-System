@@ -2,7 +2,7 @@
 <div class="main">
 <h1>Online Exam System - User Registration</h1>
 	<div class="segment" style="margin-right:30px;">
-		<img src="img/regi.png"/>
+		<img src="img/4.jpg"/>
 	</div>
 	<div class="segment">
 	<form action="" method="post">

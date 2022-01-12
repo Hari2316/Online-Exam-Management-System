@@ -5,20 +5,20 @@
  }
  
  body {
-     font-family: verdana
+     font-family: verdana;
+     background: whitesmoke;
  }
  /* the gap in the pages(the reason why it will not cover full page width) */
  
  .phpcoding {
-     width: 1600px;
+     width: max-content;
      margin: 0 auto;
-     background: #ddd
+     background: rebeccapurple;
  }
  /* first heder image in opening page */
  
  .headeroption {
-     background: #444 url("../img/online-banner.jpg") no-repeat scroll 0 0;
-     border-bottom: 0 solid #444444;
+     border-bottom: 0 solid #444;
      height: 100px;
  }
  
@@ -122,13 +122,13 @@
  
  .menu ul li {
      display: block;
-     float: left;
+     float: right;
  }
  
  .menu ul li a {
-     border: 1px solid #bdbdbd;
+     border: none;
      border-radius: 4px;
-     color: rgb(46, 41, 41);
+     color: white;
      display: block;
      margin: 0px 6px 4px;
      padding: 3px 10px 5px;
@@ -137,24 +137,23 @@
  /* the hover effect making it unclear button */
  
  .menu ul li a:hover {
-     border: 1px solid rgb(153, 39, 39);
-     ;
-     color: rgb(146, 145, 70);
+     border: none;
+     opacity: 0.6;
  }
  
  .segment {
      border: 1px solid #d3d3d3;
      border-radius: 10px;
      float: left;
-     min-height: 335px;
+     min-height: 350px;
      padding: 12px;
      width: 469px;
  }
  
  .segment img {
-     height: 214px;
-     margin-left: 125px;
-     padding-top: 71px;
+     height: 250px;
+     margin-left: 68px;
+     padding-top: 67px;
  }
  
  .segment h2 {
