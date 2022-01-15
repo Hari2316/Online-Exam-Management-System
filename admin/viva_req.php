@@ -30,8 +30,8 @@ $usr = new User();
                             <td> <?php echo $i; ?> </td>
                             <td> <?php echo $result['name']; ?> </td>
                             <td> <a target="_blank" style=" color: darkblue; text-decoration: none;" href="https://<?php echo $result['email']; ?>"><?php echo $result['email']; ?></a> </td>
-                            <td> <a target="_blank" style=" color: darkblue; text-decoration: none;" href="https://<?php echo $result['facebook']; ?>"><?php echo $result['facebook']; ?></a> </td>
-                            <td> <a target="_blank" style=" color: darkblue; text-decoration: none;" href="https://<?php echo $result['skype']; ?>"><?php echo $result['skype']; ?></a> </td>
+                            <td> <a target="_blank" style=" color: darkblue; text-decoration: none;" href="https://<?php echo $result['phone_no']; ?>"><?php echo $result['phone_no']; ?></a> </td>
+                            <td> <a target="_blank" style=" color: darkblue; text-decoration: none;" href="https://<?php echo $result['college_id']; ?>"><?php echo $result['college_id']; ?></a> </td>
                         </tr>
                     <?php } } ?>
 
