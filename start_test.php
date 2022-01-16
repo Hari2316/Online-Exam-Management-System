@@ -33,7 +33,7 @@ $total    = $exm->getTotalRows();
             <br/>
             <br/>
 
-            <a style="color: green; border-color: green; border-radius: 13px" href="test.php?q=<?php echo $question['quesNo']; ?>">Start Test Now!</a>
+            <a class="start-test" href="test.php?q=<?php echo $question['quesNo']; ?>">Start Test Now!</a>
         </div>
     </div>
 <?php include 'inc/footer.php'; ?>

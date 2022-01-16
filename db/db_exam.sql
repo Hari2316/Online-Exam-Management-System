@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2017 at 12:26 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.8
+-- Generation Time: Jan 11, 2022 at 01:59 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_exam`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dt`
+--
+
+CREATE TABLE `dt` (
+  `id` int(11) NOT NULL,
+  `action` varchar(30) NOT NULL,
+  `purpose` varchar(30) NOT NULL,
+  `DateTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `dt`
+--
+
+INSERT INTO `dt` (`id`, `action`, `purpose`, `DateTime`) VALUES
+(14, 'requested', 'viva', '2022-01-11 17:49:20'),
+(15, 'requested', 'viva', '2022-01-11 18:27:01');
 
 -- --------------------------------------------------------
 
@@ -48,8 +70,8 @@ INSERT INTO `tbl_admin` (`adminId`, `adminUser`, `adminPass`) VALUES
 CREATE TABLE `tbl_ans` (
   `id` int(11) NOT NULL,
   `quesNo` int(11) NOT NULL,
-  `rightAns` int(11) NOT NULL DEFAULT '0',
-  `ans` text NOT NULL,
+  `rightAns` int(11) NOT NULL DEFAULT 0,
+  `ans` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -95,11 +117,11 @@ CREATE TABLE `tbl_ques` (
 --
 
 INSERT INTO `tbl_ques` (`id`, `quesNo`, `ques`) VALUES
-(7, 1, 'The DBMS acts as an interface between what two components of an enterprise-class database system?'),
-(8, 2, 'Which of the following products was the first to implement true relational algebra in a PC DBMS?'),
-(9, 3, 'The following are functions of a DBMS except ________ .'),
-(10, 4, 'A DBMS that combines a DBMS and an application generator is ________ .'),
-(11, 5, 'Which of the following is not considered to be a basic element of an enterprise-class database system?');
+(1, 1, 'The DBMS acts as an interface between what two components of an enterprise-class database system?'),
+(2, 2, 'Which of the following products was the first to implement true relational algebra in a PC DBMS?'),
+(3, 3, 'The following are functions of a DBMS except ________ .'),
+(4, 4, 'A DBMS that combines a DBMS and an application generator is ________ .'),
+(5, 5, 'Which of the following is not considered to be a basic element of an enterprise-class database system?');
 
 -- --------------------------------------------------------
 
@@ -113,7 +135,7 @@ CREATE TABLE `tbl_user` (
   `username` varchar(30) NOT NULL,
   `password` varchar(32) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT '0'
+  `status` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -121,9 +143,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`userId`, `name`, `username`, `password`, `email`, `status`) VALUES
-(1, 'Zakaria Hossain', 'Zakaria', '202cb962ac59075b964b07152d234b70', 'zakaria@gmail.com', 0),
-(3, 'Hasib Hasan', 'hasib', '202cb962ac59075b964b07152d234b70', 'hasib@gmail.com', 0),
-(4, 'James Ahmed', 'James', '202cb962ac59075b964b07152d234b70', 'jamesmahmud@gmail.com', 0);
+(4, 'Harish V', 'Harish', '12345678', 'harish16@gmail.com', 0),
+(5, 'gautham', 'gautham', '87654321', 'gautham1234@gmail.com', 0);
 
 -- --------------------------------------------------------
 
@@ -132,11 +153,11 @@ INSERT INTO `tbl_user` (`userId`, `name`, `username`, `password`, `email`, `stat
 --
 
 CREATE TABLE `tbl_viva` (
-  `id` int(200) NOT NULL ,
+  `id` int(200) NOT NULL,
   `name` varchar(2000) NOT NULL,
   `email` varchar(2000) NOT NULL,
   `facebook` varchar(2000) NOT NULL,
-  `skype` varchar(2000) NOT NULL,
+  `skype` varchar(2000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -144,7 +165,16 @@ CREATE TABLE `tbl_viva` (
 --
 
 INSERT INTO `tbl_viva` (`id`, `name`, `email`, `facebook`, `skype`) VALUES
-(1, 'Zakaria ', 'zakariahossain143@gmail.com', 'facebook.com/zakaria5729', 'skype.com/593');
+(14, 'Harish V', 'harish16@gmail.com', '6361314897', 'DSCE123'),
+(15, 'Gautham V', 'gautham1234@gmail.com', '', '');
+
+--
+-- Triggers `tbl_viva`
+--
+DELIMITER $$
+CREATE TRIGGER `check` AFTER INSERT ON `tbl_viva` FOR EACH ROW INSERT INTO dt VALUES(new.id,'requested','viva',NOW())
+$$
+DELIMITER ;
 
 --
 -- Indexes for dumped tables
@@ -178,7 +208,7 @@ ALTER TABLE `tbl_user`
 -- Indexes for table `tbl_viva`
 --
 ALTER TABLE `tbl_viva`
-  ADD PRIMARY KEY (`id`),FOREIGN KEY('id') references 'tbl_user'('userId');
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -189,26 +219,32 @@ ALTER TABLE `tbl_viva`
 --
 ALTER TABLE `tbl_admin`
   MODIFY `adminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `tbl_ans`
 --
 ALTER TABLE `tbl_ans`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
 --
 -- AUTO_INCREMENT for table `tbl_ques`
 --
 ALTER TABLE `tbl_ques`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `tbl_viva`
 --
 ALTER TABLE `tbl_viva`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

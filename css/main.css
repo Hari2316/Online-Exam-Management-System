@@ -6,12 +6,12 @@
  
  body {
      font-family: verdana;
-     background: whitesmoke;
+     background-color: rebeccapurple;
  }
  /* the gap in the pages(the reason why it will not cover full page width) */
  
  .phpcoding {
-     width: max-content;
+     width: min-content;
      margin: 0 auto;
      background: rebeccapurple;
  }
@@ -24,6 +24,15 @@
  
  .success {
      color: green;
+ }
+ 
+ .start-test {
+     background-color: green;
+     color: #ccc;
+ }
+ 
+ .start-test:hover {
+     opacity: 0.7;
  }
  
  .error,
@@ -182,7 +191,6 @@
  .segment ul li {}
  
  .segment ul li a {
-     border: 1px solid #3399ff;
      border-radius: 3px;
      color: #3399ff;
      display: block;
@@ -194,8 +202,7 @@
  }
  
  .segment ul li a:hover {
-     border: 1px solid #999;
-     color: #999;
+     opacity: 0.8;
  }
  
  .test {
@@ -277,14 +284,25 @@
  }
  
  .button_next input {
-     background: #f4f4f4 none repeat scroll 0 0;
-     border: 1px solid black;
+     background: #ccc;
      border-radius: 6px;
-     color: #444444;
      margin-top: 18px;
      padding: 5px 19px;
      text-align: center;
      text-decoration: none;
+ }
+ 
+ .button_next input:hover {
+     opacity: 0.8;
+ }
+ 
+ .right-answer {
+     background-color: green;
+     color: #ccc;
+ }
+ 
+ .right-answer:hover {
+     opacity: 0.8;
  }
  
  .finalStart {

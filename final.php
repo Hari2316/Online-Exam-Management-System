@@ -21,7 +21,7 @@ Session::checkSession();
             <br/>
             <br/>
             <br/>
-            <a style="border-color: green;" href="viewAns.php">View Right Answer</a>
+            <a class="right-answer" href="viewAns.php">View Right Answer</a>
             
 <!--<a style="border-color: green;" href="start_test.php">Start Test Again.!</a>
 -->.      
