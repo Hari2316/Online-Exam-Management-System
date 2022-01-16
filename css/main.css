@@ -11,7 +11,11 @@
  /* the gap in the pages(the reason why it will not cover full page width) */
  
  .phpcoding {
+<<<<<<< HEAD
      width: min-content;
+=======
+     width: 100vw;
+>>>>>>> 4519d07d5c3ef8e60670620561538e0602587973
      margin: 0 auto;
      background: rebeccapurple;
  }

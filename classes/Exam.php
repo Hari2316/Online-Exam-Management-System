@@ -47,7 +47,7 @@ class Exam{
     }
 
     public function getQuesByOrder(){
-        $query  = "SELECT * FROM tbl_ques ORDER BY quesNo ASC";
+         $query  = "SELECT * FROM tbl_ques ORDER BY quesNo ASC";
         $result = $this->db->select($query);
         return $result;
     }

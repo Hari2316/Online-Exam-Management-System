@@ -53,7 +53,7 @@ $total    = $exm->getTotalRows();
 
         if(isset($_POST['viva_btn'])){
 
-            $usr->insert_viva_data($_POST['name'],$_POST['email'], $_POST['facebook'], $_POST['skype']);
+            $usr->insert_viva_data($_POST['name'],$_POST['email'], $_POST['phone_no'], $_POST['college_id']);
 
         }
 
@@ -71,7 +71,7 @@ $total    = $exm->getTotalRows();
 
                         <td>Name:</td>
 
-                        <td><input name="name" id="name" type="text" required="" placeholder="Enter Email"></td>
+                        <td><input name="name" id="name" type="text" required="" placeholder="Enter name"></td>
                     </tr>
                     <tr>
                         <td>E-mail:</td>
@@ -79,11 +79,11 @@ $total    = $exm->getTotalRows();
                     </tr>
                     <tr>
                         <td>Phone No:</td>
-                        <td><input name="facebook" type="text" id="facebook" required="" placeholder="9845256298"></td>
+                        <td><input name="phone_no" type="text" id="phone_no" required="" placeholder="9845256298"></td>
                     </tr>
                     <tr>
                         <td>college id:</td>
-                        <td><input name="skype" type="text" id="skype" placeholder="Enter college"></td>
+                        <td><input name="college_id" type="text" id="college_id" placeholder="Enter college"></td>
                     </tr>
                     <tr>
                     <tr>

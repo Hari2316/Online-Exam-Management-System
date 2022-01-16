@@ -112,7 +112,7 @@ class User{
 
         }else{
 
-            $query = "SELECT * FROM tbl_user WHERE email = '$email' AND password = '$password'";
+             $query = "SELECT * FROM tbl_user WHERE email = '$email' AND password = '$password'";
 
             $result = $this->db->select($query);
 
@@ -160,7 +160,7 @@ class User{
 
     public function getAllUser(){
 
-        $query = "SELECT * FROM tbl_user ORDER BY userId DESC";
+        $query = "CALL `Registered_user`();";//select * from tbl_user;(STORED PROCEDURE)
         $result = $this->db->select($query);
         return $result;
     }
@@ -242,8 +242,8 @@ class User{
         }
     }
 
-    public function insert_viva_data($name, $email, $fb, $skp){
-        $query = "INSERT INTO tbl_viva(name, email, facebook, skype) VALUES('$name', '$email', '$fb', '$skp')";
+    public function insert_viva_data($name, $email, $phone_no, $college_id){
+        $query = "INSERT INTO tbl_viva(name, email, phone_no, college_id) VALUES('$name', '$email', '$phone_no', '$college_id')";
         $insert_row = $this->db->insert($query);
         if($insert_row){
             echo "<span style='color: green'>info Successful!</span>";
