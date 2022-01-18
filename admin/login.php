@@ -24,7 +24,7 @@
 
 <div class="main">
 
-<h1 style="text-align: center">Admin Login</h1>
+<h1 style="text-align: center;color:black">Admin Login</h1>
 <div class="adminlogin">
 	
 <form action="" method="post">
@@ -33,17 +33,17 @@
 
 			<tr>
 
-				<td>Username</td>
+				<td><label for="user">Username</label></td>
 
-				<td><input type="text" name="adminUser" required=""/></td>
+				<td><input type="text" id =user name="adminUser" required=""/></td>
 
 			</tr>
 
 			<tr>
 
-				<td>Password</td>
+				<td><label for="password">Password</label></td>
 
-				<td><input type="password" name="adminPass" required=""/></td>
+				<td><input type="password" id= password name="adminPass" required=""/></td>
 
 			</tr>
 

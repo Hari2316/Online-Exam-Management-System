@@ -79,7 +79,7 @@ $exm = new Exam();
                     </tr>
                     <tr>
                         <td class="button_class" colspan="3" align="center">
-                            <input style="color: green;" type="submit" value="Add a Question" required=""/>
+                            <input type="submit" value="Add a Question" required=""/>
                         </td>
                     </tr>
 

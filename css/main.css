@@ -6,18 +6,19 @@
  
  body {
      font-family: verdana;
-     background-color: rebeccapurple;
+     /* background-color: #ccc;   */
+     background:url("../img/5.jpeg") no-repeat scroll 0 0;  
+     background-size: cover; 
+     /* background: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)); */
  }
  /* the gap in the pages(the reason why it will not cover full page width) */
  
  .phpcoding {
-<<<<<<< HEAD
      width: min-content;
-=======
-     width: 100vw;
->>>>>>> 4519d07d5c3ef8e60670620561538e0602587973
      margin: 0 auto;
-     background: rebeccapurple;
+     /* background:rgba(255,255,255,0.0); */
+     background: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7));
+     /* background: rebeccapurple;   */
  }
  /* first heder image in opening page */
  
@@ -78,8 +79,10 @@
  
  input[type="submit"] {
      cursor: pointer;
+     padding: 10px 15px;
      font-size: 15px;
-     padding: 1px 10px;
+     margin-top: 10px;
+     margin-left: 5px;
  }
  
  .tblone {
@@ -104,7 +107,9 @@
  }
  
  .main {
-     background: #fff none repeat scroll 0 0;
+     /* background: #fff none repeat scroll 0 0;  */
+     /* background:rgba(255,255,255,0.0); */
+     background: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7));
      border: 1px solid #999;
      margin-top: 7px;
      min-height: 468px;
@@ -140,7 +145,7 @@
  
  .menu ul li a {
      border: none;
-     border-radius: 4px;
+     border-radius: 5px;
      color: white;
      display: block;
      margin: 0px 6px 4px;
@@ -156,7 +161,7 @@
  
  .segment {
      border: 1px solid #d3d3d3;
-     border-radius: 10px;
+     border-radius: 5px;
      float: left;
      min-height: 350px;
      padding: 12px;
@@ -164,9 +169,10 @@
  }
  
  .segment img {
-     height: 250px;
+     height: 200px;
      margin-left: 68px;
-     padding-top: 67px;
+     padding-top: 140px;
+     padding-left: 80px;
  }
  
  .segment h2 {
@@ -178,12 +184,13 @@
  }
  
  .segment a {
-     color: #3399ff;
-     text-decoration: underline
+     color: #f4f4f4;
+     text-decoration: underline;
  }
  
  .segment a:hover {
-     text-decoration: none
+     text-decoration: none;
+     color:rebeccapurple;
  }
  
  .segment ul {
@@ -195,8 +202,9 @@
  .segment ul li {}
  
  .segment ul li a {
-     border-radius: 3px;
-     color: #3399ff;
+     color: white;
+     border-radius: 5px;
+     background-color: rgb(20, 173, 211);
      display: block;
      margin-bottom: 5px;
      padding: 5px 10px;
@@ -211,7 +219,7 @@
  
  .test {
      border: 1px solid #f3f3f3;
-     border-radius: 20px;
+     border-radius: 5px;
      margin: 0 auto;
      max-width: 680px;
      padding: 43px;
@@ -242,7 +250,7 @@
      margin: 0 auto;
      padding: 55px;
      width: 516px;
-     border-radius: 12px;
+     border-radius: 5px;
  }
  
  .starttest h2 {
@@ -264,36 +272,31 @@
  }
  
  .starttest a {
-     background: #f4f4f4 none repeat scroll 0 0;
+     background: #3399ff none repeat scroll 0 0;
      border: 1px solid #dddddd;
-     border-radius: 20px;
-     color: #444444;
+     border-radius: 5px;
+     color: white;
      display: compact;
      margin-top: 10px;
-     padding: 6px 10px;
+     padding: 10px 15px;
      text-align: center;
      text-decoration: none;
  }
  
  .button_class input {
-     background: #f4f4f4 none repeat scroll 0 0;
+     background: #3399ff none repeat scroll 0 0;
      border: 1px solid #666666;
-     color: #444444;
+     color: white;
      display: compact;
      margin-top: 2px;
-     padding: 4px 12px;
+     padding: 10px 15px;
      text-align: center;
      text-decoration: none;
      border-radius: 3px;
  }
  
- .button_next input {
-     background: #ccc;
-     border-radius: 6px;
-     margin-top: 18px;
-     padding: 5px 19px;
-     text-align: center;
-     text-decoration: none;
+ .button_class input:hover {
+     opacity: 0.8;
  }
  
  .button_next input:hover {
@@ -318,7 +321,7 @@
      padding: 6px 10px;
      text-align: center;
      text-decoration: none;
-     border-radius: 10px;
+     border-radius: 5px;
  }
  
  .segment_viva {
@@ -326,11 +329,11 @@
      margin: 0 auto;
      padding: 9px 61px 20px;
      width: 447px;
-     border-radius: 10px;
+     border-radius: 5px;
  }
  
  .viva_main {
-     background: #fff none repeat scroll 0 0;
+     background:linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7));
      border: 1px solid #999;
      margin-top: 7px;
      min-height: 520px;
@@ -353,7 +356,7 @@
  .viva_starttest a {
      background: #f4f4f4 none repeat scroll 0 0;
      border: 1px solid #dddddd;
-     border-radius: 20px;
+     border-radius: 5px;
      color: #444444;
      display: compact;
      margin-top: 5px;

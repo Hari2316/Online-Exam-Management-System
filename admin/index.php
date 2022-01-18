@@ -15,10 +15,10 @@
     </style>
 
 <div class="main">
-<h1 style="text-align: center">Admin Panel</h1>
+<h1 style="text-align: center;color:purple">Admin Panel</h1>
     <div class="adminpanel">
-        <h2 style="text-align: center">Welcome to Admin Panel.</h2>
-        <p style="text-align: center">You can manage your user and online exam system from here..</p>
+        <h2 style="text-align: center;color:purple">Welcome to Admin Panel.</h2>
+        <p style="text-align: center;color:purple">You can manage your user and online exam system from here..</p>
     </div>
 
 

@@ -8,19 +8,19 @@
 	<form action="" method="post">
 		<table style="padding-left: 60px; padding-top: 25px">
 		<tr>
-           <td>Name:</td>
+           <td><label for="name">Name:</label></td>
            <td><input type="text" name="name" id="name" required="" placeholder="Enter Name"></td>
          </tr>
 		<tr>
-           <td>Username:</td>
+           <td><label for="username">Username:</label></td>
            <td><input name="name" type="text" id="username" required="" placeholder="Enter Username"></td>
          </tr>
          <tr>
-           <td>Password:</td>
+           <td><label for="password">Password:</label></td>
            <td><input type="password" name="password" id="password" required="" placeholder="Enter Password"></td>
          </tr>
             <tr>
-                <td>E-mail:</td>
+                <td><label for="email">E-mail:</label></td>
                 <td><input name="email" id="email" type="text" required="" placeholder="Enter Email"></td>
             </tr>
          <tr>

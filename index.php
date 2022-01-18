@@ -13,11 +13,11 @@
 	<form action="" method="post">
 		<table class="tbl" style="padding-left: 60px; padding-top: 65px">
 			 <tr>
-			   <td>E-mail:</td>
+			   <td><label for="email">E-mail:</label></td>
 			   <td><input name="email" id="email" type="text" required="" placeholder="Enter E-mail"></td>
 			 </tr>
 			 <tr>
-			   <td>Password:</td>
+			   <td><label for="password">Password:</label></td>
 			   <td><input name="password" id="password" type="password" required="" placeholder="Enter Password"></td>
 			 </tr>
 			  <tr>

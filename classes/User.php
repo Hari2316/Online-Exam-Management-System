@@ -67,9 +67,9 @@ class User{
             }else{
 
                 $password = mysqli_real_escape_string($this->db->link, ($password));
-
+            
                 $query = "INSERT INTO tbl_user(name, username, password, email) VALUES('$name', '$username', '$password', '$email')";
-
+                
                 $insert_row = $this->db->insert($query);
 
                 if($insert_row){
@@ -98,7 +98,7 @@ class User{
         $email    = $this->fm->validation($email);
 
         $password = $this->fm->validation($password);
-
+       
 
         $email    = mysqli_real_escape_string($this->db->link, $email);
 

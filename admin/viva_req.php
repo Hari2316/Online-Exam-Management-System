@@ -13,9 +13,9 @@ $usr = new User();
                 <tr>
                     <th>No</th>
                     <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>college</th>
+                    <th>E-mail</th>
+                    <th>Phone no</th>
+                    <th>college id</th>
                 </tr>
 
                 <?php
