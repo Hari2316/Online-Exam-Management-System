@@ -160,7 +160,7 @@ class User{
 
     public function getAllUser(){
 
-        $query = "CALL `Registered_user`();";//select * from tbl_user;(STORED PROCEDURE)
+        $query = "select * from tbl_user";
         $result = $this->db->select($query);
         return $result;
     }

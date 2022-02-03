@@ -56,7 +56,7 @@ class Process{
 
         if($number == $total){
 
-            if($_SESSION['score'] >=$total-3){
+            if($_SESSION['score'] >=$total-1){
 
                 header("Location:viva.php");
 

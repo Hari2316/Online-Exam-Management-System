@@ -14,13 +14,13 @@
  .phpcoding {
      width: 1100px;
      margin: 0 auto;
-     background: #ddd
+     background:linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7));
  }
  
  .headeroption {
      height: 100px;
      /* background-color: rebeccapurple; */
-     background:linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7));
+     /* background:linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)); */
  }
  
  .footeroption {
